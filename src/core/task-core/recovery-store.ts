@@ -1,3 +1,4 @@
+// 来源：提取自 talos-plugin（TALOS Personal Use Source License 1.0），详见 LICENSE 与 NOTICE.md。
 export interface RecoveryCaptureInput {
 	taskId: string;
 	actionId: string;

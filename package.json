@@ -9,7 +9,7 @@
 		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
 	},
 	"keywords": [],
-	"license": "SEE LICENSE IN NOTICE.md",
+	"license": "SEE LICENSE IN LICENSE",
 	"devDependencies": {
 		"esbuild": "0.25.5",
 		"obsidian": "1.10.3",

@@ -24,3 +24,11 @@ They contain no Obsidian runtime dependencies and are pure logic:
 | `src/core/action-core/types.ts` | `talos-plugin/src/action-core/types.ts` |
 | `src/core/action-core/risk-policy.ts` | `talos-plugin/src/action-core/risk-policy.ts` |
 | `src/core/action-core/registry.ts` | `talos-plugin/src/action-core/registry.ts` |
+
+## License
+
+本项目以 **TALOS Personal Use Source License 1.0** 分发，全文见 [LICENSE](LICENSE)，
+该许可证文本原样复制自 talos-plugin。
+
+> 提示：`package.json` 的 `license` 字段目前指向 `NOTICE.md`，与 `LICENSE` 文件并存，
+> 如需统一可将其改为 `SEE LICENSE IN LICENSE`。
