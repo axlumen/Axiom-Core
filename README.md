@@ -10,7 +10,11 @@
 npm install
 npm run build      # tsc 类型检查 + esbuild 打包，产出 main.js
 npm run dev        # watch 模式，改代码自动重建 main.js
+npm run deploy     # 构建并部署到 E:/文档/Obsidian/.obsidian/plugins/axiom-core
 ```
+
+`npm run deploy` 会先执行 `npm run build`，再把 `main.js` 与 `manifest.json`
+复制到目标目录（可用 `node deploy.mjs <目标目录>` 覆盖默认路径）。
 
 > `main.js` 与 `node_modules` 已被 `.gitignore` 忽略，不入库；换机器后需重新构建。
 
@@ -31,6 +35,20 @@ npm run dev        # watch 模式，改代码自动重建 main.js
 2. `Ctrl+P` 打开命令面板 → 输入 `编译收件箱测试笔记` → 回车。
 3. 预期结果：右下角 Notice 提示编译完成，并生成 `05-Wikis/compiled-test.md`，
    内容为 `# 编译测试` + 空行 + 原文。
+
+### 配置 LLM（智能编译）
+
+1. 在仓库根目录的 `00-Inbox/` 下放入任意 `.md` 笔记。
+2. Obsidian → 设置 → **Axiom Core**，填写三项：
+   - **API Key**：DeepSeek / OpenAI / Anthropic 兼容服务的密钥
+   - **Base URL**：如 `https://api.deepseek.com`；用 OpenAI 官方接口填 `https://api.openai.com/v1`
+   - **Model Name**：如 `deepseek-chat`
+   配置通过 `loadData` / `saveData` 持久化在插件的 `data.json` 中。
+3. `Ctrl+P` → 输入 `智能编译收件箱笔记` → 回车。
+4. 预期：生成 `05-Wikis/compiled-smart.md`，内容为模型改写后的结构化 Markdown 知识卡片。
+
+> 命令会扫描 `00-Inbox/` 下所有 `.md` 并取第一个；目录为空时提示
+> `00-Inbox/ 为空，请放入 Markdown 文件`。
 
 ### 排错
 
