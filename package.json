@@ -1,0 +1,18 @@
+{
+	"name": "axiom-core",
+	"version": "0.1.0",
+	"description": "Lightweight Obsidian plugin core: agent task loop, tool pipeline, inbox-to-wiki ingestion.",
+	"main": "main.js",
+	"type": "module",
+	"scripts": {
+		"dev": "node esbuild.config.mjs",
+		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production"
+	},
+	"keywords": [],
+	"license": "SEE LICENSE IN NOTICE.md",
+	"devDependencies": {
+		"esbuild": "0.25.5",
+		"obsidian": "1.10.3",
+		"typescript": "^5.8.3"
+	}
+}

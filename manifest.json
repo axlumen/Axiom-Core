@@ -1,0 +1,9 @@
+{
+	"id": "axiom-core",
+	"name": "Axiom Core",
+	"version": "0.1.0",
+	"minAppVersion": "1.0.0",
+	"description": "Lightweight agent task loop, tool pipeline, and inbox-to-wiki ingestion core.",
+	"author": "axlumen",
+	"isDesktopOnly": false
+}
